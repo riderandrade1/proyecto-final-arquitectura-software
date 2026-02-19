@@ -1,0 +1,28 @@
+
+---
+
+# 📄 schema.graphql
+
+```graphql
+"""
+Esquema GraphQL del Sistema Financiero
+"""
+
+type Query {
+  getAccount(id: ID!): Account
+  getActiveClients: [Client]
+}
+
+type Account {
+  id: ID!
+  owner: String!
+  balance: Float!
+  currency: String!
+}
+
+type Client {
+  id: ID!
+  name: String!
+  email: String!
+  active: Boolean!
+}
